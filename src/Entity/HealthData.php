@@ -13,7 +13,7 @@ class HealthData
 {
     /**
      * @ORM\Id
-     * @ORM\Column(type="uuid")
+     * @ORM\Column(type="uuid", unique=true)
      */
     private $healthDataUUID;
 
