@@ -1,0 +1,24 @@
+Healthdata:
+    type: object
+    config:
+        fields:
+            healthDataUUID:
+                type: "ID!"
+            patientUUID:
+                type: "ID!"
+            callTimeStarts:
+                type: "String"
+            callTimeEnds:
+                type: "String"
+            dateTimeCollected:
+                type: "String"
+            weight:
+                type: "Int"
+            height:
+                type: "Int"
+            bloddPressureHigh:
+                type: "Int"
+            bloddPressureLow:
+                type: "Int"
+            glucoseLevel:
+                type: "Int"
