@@ -7,18 +7,18 @@ Healthdata:
             patientUUID:
                 type: "ID!"
             callTimeStarts:
-                type: "String"
+                type: "DateTime"
             callTimeEnds:
-                type: "String"
+                type: "DateTime"
             dateTimeCollected:
-                type: "String"
+                type: "DateTime"
             weight:
                 type: "Int"
             height:
                 type: "Int"
-            bloddPressureHigh:
+            bloodPressureHigh:
                 type: "Int"
-            bloddPressureLow:
+            bloodPressureLow:
                 type: "Int"
             glucoseLevel:
                 type: "Int"
