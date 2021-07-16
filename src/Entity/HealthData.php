@@ -23,7 +23,7 @@ class HealthData
     private $patientUUID;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $callTimeStarts;
 
@@ -65,6 +65,7 @@ class HealthData
     public function __construct()
     {
         $this->healthDataUUID = Uuid::v4();
+        $this->dateTimeCollected =  new \DateTime();
     }
 
     public function getHealthDataUUID()
@@ -117,13 +118,6 @@ class HealthData
     public function getDateTimeCollected(): ?\DateTimeInterface
     {
         return $this->dateTimeCollected;
-    }
-
-    public function setDateTimeCollected(\DateTimeInterface $dateTimeCollected): self
-    {
-        $this->dateTimeCollected = $dateTimeCollected;
-
-        return $this;
     }
 
     public function getWeight(): ?float
