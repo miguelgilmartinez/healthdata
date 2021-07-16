@@ -67,6 +67,7 @@
         }
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "overblog/graphiql-bundle": "^0.2.1",
         "symfony/maker-bundle": "^1.33",
         "symfony/phpunit-bridge": "^5.3"
