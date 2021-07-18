@@ -28,21 +28,17 @@ class HealthDataResolver implements ResolverInterface, AliasedInterface
         return $values;
     }
 
-    private function convertDateTimeToString(?\DateTime $date)
+    public function findByID(Argument $args)
     {
-        return is_null($date) ? '': $date->format('Y-m-d H:i:s');
+        return $this->em->getRepository(HealthData::class)
+            ->findOneById($args['userUUID']);
     }
-
-    // public function findByID(Argument $args) {
-    //     return $this->em->getRepository(HealthData::class)
-    //                     ->findOneById($args['userUUID']);
-    // }
 
     public static function getAliases(): array
     {
         return [
-            'findAllHealthData' => 'all_healthdata'
-            // 'findByID' => 'user_by_id'
+            'findAllHealthData' => 'all_healthdata',
+            'findByID' => 'user_by_id'
         ];
     }
 }

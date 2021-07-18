@@ -8,7 +8,10 @@ framework:
             # async: '%env(MESSENGER_TRANSPORT_DSN)%'
             # failed: 'doctrine://default?queue_name=failed'
             # sync: 'sync://'
+            amqp_healthdata: '%env(MESSENGER_TRANSPORT_DSN)%/healthdata'
 
         routing:
             # Route your messages to the transports
             # 'App\Message\YourMessage': async
+            #'App\MessageBus\Message\Image\Resize': amqp_image_resize
+            'App\Message\NewHealthdata': amqp_healthdata
