@@ -87,7 +87,6 @@ class HealthData
     public function setPatientUUID($patientUUID): self
     {
         $this->patientUUID = $patientUUID;
-
         return $this;
     }
 
@@ -99,7 +98,6 @@ class HealthData
     public function setCallTimeStarts(\DateTimeInterface $callTimeStarts): self
     {
         $this->callTimeStarts = $callTimeStarts;
-
         return $this;
     }
 
@@ -111,7 +109,6 @@ class HealthData
     public function setCallTimeEnds(?\DateTimeInterface $callTimeEnds): self
     {
         $this->callTimeEnds = $callTimeEnds;
-
         return $this;
     }
 
@@ -128,7 +125,6 @@ class HealthData
     public function setWeight(?float $weight): self
     {
         $this->weight = $weight;
-
         return $this;
     }
 
@@ -140,7 +136,6 @@ class HealthData
     public function setHeight(?float $height): self
     {
         $this->height = $height;
-
         return $this;
     }
 
@@ -152,7 +147,6 @@ class HealthData
     public function setBloodPressureHigh(?int $bloodPressureHigh): self
     {
         $this->bloodPressureHigh = $bloodPressureHigh;
-
         return $this;
     }
 
@@ -164,7 +158,6 @@ class HealthData
     public function setBloodPressureLow(?int $bloodPressureLow): self
     {
         $this->bloodPressureLow = $bloodPressureLow;
-
         return $this;
     }
 
@@ -176,7 +169,10 @@ class HealthData
     public function setGlucoseLevel(?int $glucoseLevel): self
     {
         $this->glucoseLevel = $glucoseLevel;
-
         return $this;
+    }
+
+    public function __toString(): string{
+        return serialize($this);
     }
 }

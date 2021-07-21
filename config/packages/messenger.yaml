@@ -14,4 +14,4 @@ framework:
             # Route your messages to the transports
             # 'App\Message\YourMessage': async
             #'App\MessageBus\Message\Image\Resize': amqp_image_resize
-            'App\Message\NewHealthdata': amqp_healthdata
+            'App\MessageBus\Message\HealthdataMsg': amqp_healthdata
